@@ -1,0 +1,19 @@
+CREATE table Store(id INTEGER Primary KEY, Apparel text, Price integer, aisle INTEGER, material TEXT);
+INSERT INTO Store VALUES (1,"men's Boots", 299.99, 2, "leather");
+INSERT INTO Store VALUES (2,"men's belts", 79.99, 6, "leather");
+INSERT INTO Store VALUES (3,"men's hats", 99.99, 3, "felt");
+INSERT INTO Store VALUES (4,"mens jeans", 109.99, 4, "cotton");
+INSERT INTO Store VALUES (5,"men's shirts", 69.99, 5, "cotton");
+INSERT INTO Store VALUES (6,"men's workwear", 84.99, 5, "cotton");
+INSERT INTO Store VALUES (7,"men's accessories", 34.99, 1, "leather");
+INSERT INTO Store VALUES (8,"women's boots", 169.99, 7, "leather");
+INSERT INTO Store VALUES (9,"women's belts", 59.99, 8, "leather");
+INSERT INTO Store VALUES (10,"women's hats", 69.99, 9, "felt");
+INSERT INTO Store VALUES (11,"women's jeans", 99.99, 10, "cotton");
+INSERT INTO Store VALUES (12,"women's tops", 49.99, 11, "cotton");
+INSERT INTO Store VALUES (13,"women's dresses", 89.99, 12, "cotton");
+INSERT INTO Store VALUES (14,"women's accessories", 39.99, 1, "leather");
+INSERT INTO Store VALUES (15,"women's outerwear", 109.99, 13, "leather");
+
+SELECT * FROM Store ORDER BY price;
+SELECT SUM(price) FROM Store
