@@ -1,0 +1,54 @@
+CREATE TABLE artists (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    stage_name TEXT,
+    real_name TEXT
+); 
+
+INSERT INTO artists (stage_name, real_name) VALUES ("Bad Bunny", "Benito Ocasio");
+INSERT INTO artists (stage_name, real_name) VALUES ("Karol G", "Carolina Navarro");
+INSERT INTO artists (stage_name, real_name) VALUES ("Becky G", "Rebecca Gomez");
+INSERT INTO artists (stage_name, real_name) VALUES ("Farruko", "Carlos Rosado");
+INSERT INTO artists (stage_name, real_name) VALUES ("Anuel AA", "Emmanuel Santiago");
+
+CREATE TABLE songs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    artist_id INTEGER,
+    title TEXT,
+    release_year INTEGER,
+    album TEXT); 
+
+
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (1, "Party", 2022, "un verano sin ti");
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (1, "Ojitos lindos", 2022, "un verano sin ti");
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (1, "No me conoce", 2019, "Famouz");
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (1, "La Cancion", 2019, "Oasis");
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (1, "Vete", 2020, "YHLQMDLG");
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (2, "Gatubela", 2022, "manana sera bonito");
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (2, "El Makinon", 2021, "KG0516");
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (2, "TQG", 2023, "Manana sera bonito");
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (3, "Mamiii", 2022, "Mamiii");
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (3, "Baile con mi ex", 2022, "esquemas");
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (3, "Mayores", 2017, "Mala Santa");
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (4, "Pepas", 2021, "La 167");
+INSERT INTO songs (artist_id, title, release_year, album) 
+   VALUES (5, "Secreto", 2019, "El secreto");
+
+  
+
+SELECT stage_name, title
+   FROM artists, songs
+   WHERE artists.id = songs.artist_id;
+   
+   
